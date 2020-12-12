@@ -1,0 +1,55 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Sokağa Çıkma Yasağı API",
+    "description": "Description of API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "tags": [
+    {
+      "name": "API",
+      "description": "API for Users"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/{age}/{doYouWorking}": {
+      "get": {
+        "tags": [
+          "Yasağı konrtol et"
+        ], 
+        "parameters": [
+          {
+            "name": "age",
+            "in": "path",
+            "required": true,
+            "description": "Yaş",
+            "type": "string"
+          },
+          {
+            "name": "doYouWorking",
+            "in": "path",
+            "required": true,
+            "description": "yes-no şeklinde",
+            "type": "string"
+          }
+        ],
+        "summary": "Yaşa göre sokağa çıkma yasağını kontrol eder.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
