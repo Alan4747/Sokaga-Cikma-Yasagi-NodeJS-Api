@@ -5,13 +5,12 @@ router.get('/:age/:doYouWorking', (req, res) => {
     let age = req.params.age;
     let doYouWorking = req.params.doYouWorking;
     let now = Date.now();
-    console.log(now);
     if (isWeekend(now) == true) {
 
         if (isItBefor10AMClock(now) == true) {
 
             res.send(200, {
-                message: "Evde Kal"
+                ban: "Evde Kal"
             });
         } else {
 
@@ -20,7 +19,7 @@ router.get('/:age/:doYouWorking', (req, res) => {
                 if (age >= 65 || age < 20) {
 
                     res.send(200, {
-                        message: "Evde Kal"
+                        ban: "Evde Kal"
                     });
                 } else {
 
@@ -33,7 +32,7 @@ router.get('/:age/:doYouWorking', (req, res) => {
             } else {
 
                 res.send(200, {
-                    message: "Evde Kal"
+                    ban: "Evde Kal"
                 });
             }
         }
@@ -44,7 +43,7 @@ router.get('/:age/:doYouWorking', (req, res) => {
             if (age >= 65 || age < 20) {
 
                 res.send(200, {
-                    message: "Evde Kal"
+                    ban: "Evde Kal"
                 });
 
             } else {
@@ -56,7 +55,7 @@ router.get('/:age/:doYouWorking', (req, res) => {
             if (isItBefor5AMClock(now) == true) {
 
                 res.send(200, {
-                    message: "Evde Kal"
+                    ban: "Evde Kal"
                 });
             } else {
 
